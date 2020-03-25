@@ -28,4 +28,4 @@ $ npm init create-react-component-library my-project
 [npm-url]: https://npmjs.org/package/create-react-component-library
 [npm-image]: https://img.shields.io/npm/v/create-react-component-library.svg
 [license-url]: LICENSE.md
-[license-image]: https://img.shields.io/github/license/magneh/create-react-component-library.svg
+[license-image]: https://img.shields.io/github/license/MagneH/create-react-component-library.svg
