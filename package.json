@@ -47,7 +47,8 @@
     "prepare": "npm run build",
     "test": "jest --watch",
     "test:once": "jest",
-    "apply:format": "prettier --write \"**/*.{css,less,sass,scss,html,md,graphql,gql,json,ts,tsx,js,jsx,yml,yaml}\""
+    "apply:format": "prettier --write \"**/*.{css,less,sass,scss,html,md,graphql,gql,json,ts,tsx,js,jsx,yml,yaml}\"",
+    "publish": "npm publish"
   },
   "dependencies": {
     "axios": "^0.19.0",
