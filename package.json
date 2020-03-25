@@ -1,0 +1,122 @@
+{
+  "name": "create-react-component-library",
+  "version": "0.1.0",
+  "description": "Create react component library command line utility",
+  "author": "MagneH",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagneH/create-react-component-library.git"
+  },
+  "keywords": [
+    "create-react-library",
+    "react",
+    "rollup",
+    "sass",
+    "scss",
+    "typescript",
+    "storybook",
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/MagneH/create-react-component-libraryissues"
+  },
+  "homepage": "https://github.com/MagneH/create-react-component-library#README.md",
+  "engines": {
+    "node": ">= 8.11.3",
+    "npm": ">= 5.6.0"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "create-react-component-library": "./create-react-component-library.js"
+  },
+  "files": [
+    "create-react-component-library.js",
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "build:watch": "tsc --build --watch",
+    "check:types": "tsc",
+    "check:format": "prettier --list-different \"**/*.{css,less,sass,scss,html,md,graphql,gql,json,ts,tsx,js,jsx,yml,yaml}\"",
+    "check:linting": "eslint --cache --cache-location node_modules/.cache/.eslintcache \"*.{ts,js}?(x)\" \"{src,test,types,webpack}/**/*.{ts,js}?(x)\"",
+    "clean": "del-cli ./dist tsconfig.tsbuildinfo",
+    "prepare": "npm run build",
+    "test": "jest --watch",
+    "test:once": "jest",
+    "apply:format": "prettier --write \"**/*.{css,less,sass,scss,html,md,graphql,gql,json,ts,tsx,js,jsx,yml,yaml}\""
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "chalk": "^3.0.0",
+    "commander": "^4.0.0",
+    "execa": "^4.0.0",
+    "fs-extra": "^8.1.0",
+    "listr": "^0.14.2",
+    "lodash.defaults": "^4.2.0",
+    "source-map-support": "^0.5.13",
+    "tar": "^6.0.0",
+    "update-notifier": "^4.0.0",
+    "validate-npm-package-name": "^3.0.0",
+    "write-pkg": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^8.0.0",
+    "@types/jest": "^25.0.0",
+    "@types/listr": "^0.14.2",
+    "@types/lodash.defaults": "^4.2.6",
+    "@types/split": "^1.0.0",
+    "@types/table": "^4.0.6",
+    "@types/tar": "^4.0.3",
+    "@types/update-notifier": "^2.5.0",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "del-cli": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.6.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^23.1.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "execa": "^4.0.0",
+    "jest": "^25.1.0",
+    "jest-transform-stub": "^2.0.0",
+    "prettier": "^2.0.2",
+    "ts-jest": "^25.0.0",
+    "typescript": "^3.5.3"
+  },
+  "jest": {
+    "bail": false,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,js}?(x)",
+      "*.js"
+    ],
+    "coverageDirectory": ".coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 30,
+        "functions": 45,
+        "lines": 45,
+        "statements": 45
+      }
+    },
+    "projects": [
+      "<rootDir>"
+    ],
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/test/__tests__/**/*.{ts,js}?(x)"
+    ],
+    "transform": {
+      "^.+\\.(j|t)sx?$": "ts-jest",
+      ".+\\.(styl|css|sass|scss|less|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|ico|webmanifest|xml)$": "jest-transform-stub"
+    },
+    "silent": true,
+    "verbose": true
+  }
+}
