@@ -15,9 +15,13 @@ Run one of the following commands to create a new react component library.
 $ npx create-react-component-library my-project
 ```
 
+or 
+
 ```bash
-$ npm init create-react-component-library my-project
+$ npm i -g create-react-component-library
+$ create-react-component-library my-project
 ```
+
 
 <a id="license"></a>
 
